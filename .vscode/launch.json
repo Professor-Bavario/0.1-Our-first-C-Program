@@ -1,0 +1,50 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug (MSYS2)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}/../${fileBasenameNoExtension}.exe",
+      "cwd": "${fileDirname}/..",
+      "MIMode": "gdb",
+      "miDebuggerPath": "C:/msys64/usr/bin/gdb.exe",
+      "preLaunchTask": "Build (MSYS2)",
+      "externalConsole": true
+    },
+    {
+      "name": "Debug (Linux)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}/../${fileBasenameNoExtension}",
+      "cwd": "${fileDirname}/..",
+      "MIMode": "gdb",
+      "miDebuggerPath": "/usr/bin/gdb",
+      "logging": {
+        "engineLogging": false,
+        "trace": false,
+        "traceResponse": false
+      },
+      "preLaunchTask": "Build (Linux)"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": false,
+      "cwd": ".",
+      "program": "build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb.exe",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
